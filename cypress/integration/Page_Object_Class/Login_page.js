@@ -12,7 +12,7 @@ class loginPage{
     }
 
     loginToApplication(email,password){
-        cy.login_into_application(email,password ) //Using login custom command
+        cy.login_into_application(email,password ) //Using login custom command referecence -> Support > command.js
     }
 
     click_TaskButton(){
