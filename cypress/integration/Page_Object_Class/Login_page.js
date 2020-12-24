@@ -30,29 +30,29 @@ class loginPage{
         loginButton.click()
     }
 
-   click_TaskButton(){
-    cy.wait(50000)
-    const taskButton = cy.get('.cu-float-button__toggle-simple-container-create-task')
-    taskButton.click()
-   }
-
-   create_Task(value){
-       const inputField = cy.get('.notranslate > .ql-editor')
-       inputField.clear()
-       inputField.type(value)
-       return this
-   }
-
-   Enter_TaskName(value){
-       const taskName = cy.get('.cu-form__input')
-       taskName.clear
-       taskName.type(value)
-   }
-
-   click_TaskCreateButton(){
-       const create_Task_Button = cy.get('.cu-draft-view__submit-msg')
-       create_Task_Button.click()
-   }
+    click_TaskButton(){
+        cy.wait(50000)
+        const taskButton = cy.get('.cu-float-button__toggle-simple-container-create-task')
+        taskButton.click()
+       }
+    
+       create_Task(value){
+           const inputField = cy.get('.notranslate > .ql-editor')
+           inputField.clear()
+           inputField.type(value)
+           return this
+       }
+    
+       Enter_TaskName(value){
+           const taskName = cy.get('.cu-form__input')
+           taskName.clear
+           taskName.type(value)
+       }
+    
+       click_TaskCreateButton(){
+           const create_Task_Button = cy.get('.cu-draft-view__submit-msg')
+           create_Task_Button.click()
+       }
 
 }
 
