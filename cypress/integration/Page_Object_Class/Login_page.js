@@ -11,23 +11,8 @@ class loginPage{
         const loginButton = cy.get("[id='login-submit']").should('contain.text','Login')
     }
 
-    enter_Email_Address(value){
-        const emailID = cy.get("[id='email-input']")
-        emailID.clear()
-        emailID.type(value)
-        return this
-    }
-
-    enter_Password(value){
-        const password = cy.get("[id='password-input']")
-        password.clear()
-        password.type(value)
-        return this
-    }
-
-    click_LoginButton(){
-        const loginButton = cy.get("[id='login-submit']")
-        loginButton.click()
+    loginToApplication(email,password){
+        cy.login_into_application(email,password ) //Using login custom command
     }
 
     click_TaskButton(){

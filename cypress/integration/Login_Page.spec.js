@@ -22,10 +22,7 @@ describe('Cypress automation test', function(){
 
     it('TC-02 - Log into the application', function(){
         const lp = new loginPage()
-        lp.enter_Email_Address(this.data.email)
-        lp.enter_Password(this.data.pasWord)
-        lp.click_LoginButton()
-        cy.wait(200)
+        lp.loginToApplication(this.data.email, this.data.pasWord)
     })
 
     it('TC-03 - Click on the Task button', function(){

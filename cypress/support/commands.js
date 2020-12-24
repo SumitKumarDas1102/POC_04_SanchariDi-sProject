@@ -23,3 +23,13 @@
 //
 // -- This will overwrite an existing command --
 // Cypress.Commands.overwrite("visit", (originalFn, url, options) => { ... })
+
+
+//Log into the application custom command
+Cypress.Commands.add("login_into_application", (email, password) => { 
+    cy.get("[id='email-input']").type(email)
+    cy.get("[id='password-input']").type(password)
+    cy.get("[id='login-submit']").click()
+    cy.wait(200)
+ })
+
